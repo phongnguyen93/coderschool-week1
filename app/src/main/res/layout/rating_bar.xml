@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+		android:paddingBottom="@dimen/space_medium"
+		android:paddingTop="@dimen/space_small"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+	<com.hedgehog.ratingbar.RatingBar
+			android:id="@+id/ratingbar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			hedgehog:clickable="true"
+			hedgehog:halfstart="false"
+			hedgehog:starCount="5"
+			hedgehog:starEmpty="@drawable/ic_star_nofill"
+			hedgehog:starFill="@drawable/ic_star_fill"
+			hedgehog:starImageHeight="36dp"
+			hedgehog:starImagePadding="@dimen/space_medium"
+			hedgehog:starImageWidth="36dp"/>
+
+	<TextView
+			android:layout_centerVertical="true"
+			android:id="@+id/tvRating"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="@dimen/space_medium"
+			android:layout_marginStart="@dimen/space_medium"
+			android:layout_toEndOf="@id/ratingbar"
+			android:layout_toRightOf="@id/ratingbar"
+			android:gravity="center_vertical"
+			android:textColor="@color/colorAccent"
+			android:textSize="24sp"
+			android:textStyle="bold"/>
+
+	<TextView
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignBaseline="@id/tvRating"
+			android:layout_toEndOf="@id/tvRating"
+			android:layout_toRightOf="@+id/tvRating"
+			android:gravity="center_vertical"
+			android:text="@string/base_rating_text"
+			android:textColor="@color/secondaryText"
+			android:textSize="@dimen/movie_detail_common_text_size"/>
+</RelativeLayout>
+

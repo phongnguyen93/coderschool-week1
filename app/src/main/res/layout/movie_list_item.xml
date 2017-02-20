@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/list_item_height"
+		android:background="@android:color/transparent"
+		android:orientation="vertical"
+		>
+
+	<View
+			android:id="@+id/view"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/shadow_32850_10_fill"
+			android:layout_marginTop="24dp"
+			android:layout_marginBottom="@dimen/space_medium"
+			android:layout_marginLeft="@dimen/space_medium"
+			android:layout_marginRight="@dimen/space_medium"
+			>
+	</View>
+
+
+		<RelativeLayout
+				android:background="@android:color/transparent"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:padding="@dimen/space_large">
+
+			<android.support.v7.widget.CardView
+					android:id="@+id/poster_layout"
+					android:layout_width="wrap_content"
+					app:cardElevation="8dp"
+					app:cardCornerRadius="4dp"
+					android:layout_marginLeft="@dimen/space_medium"
+					android:layout_marginRight="@dimen/space_medium"
+					android:layout_marginBottom="@dimen/space_medium"
+					android:layout_height="match_parent">
+
+				<FrameLayout
+						android:layout_width="match_parent"
+						android:layout_height="match_parent">
+					<ImageView
+							android:id="@+id/imgPoster"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							tools:ignore="ContentDescription"/>
+					<ImageView
+							android:background="@drawable/poster_cover_background"
+							android:layout_width="match_parent"
+							android:layout_height="match_parent"
+							tools:ignore="ContentDescription"/>
+					<ImageButton
+							android:background="@null"
+							android:id="@+id/btn_instant_play"
+							android:scaleX="1.5"
+							android:scaleY="1.5"
+							android:layout_gravity="center"
+							android:src="@drawable/ic_play_button"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							tools:ignore="ContentDescription"/>
+				</FrameLayout>
+
+			</android.support.v7.widget.CardView>
+
+			 <android.support.v7.widget.CardView
+					 android:id="@+id/rating_layout"
+					 android:layout_gravity="bottom"
+					 app:cardElevation="12dp"
+					 android:layout_margin="@dimen/space_medium"
+					 app:cardCornerRadius="24dp"
+					 android:layout_width="@dimen/rating_button_size"
+					 android:layout_height="@dimen/rating_button_size">
+				 <TextView
+						 android:text="2.5"
+						 android:gravity="center"
+						 android:layout_gravity="center"
+						 android:background="@drawable/rating_background"
+						 android:id="@+id/tvRating"
+						 android:textColor="@android:color/white"
+						 android:textSize="@dimen/movie_list_title_text_size"
+						 android:layout_width="match_parent"
+						 android:layout_height="match_parent"/>
+			 </android.support.v7.widget.CardView>
+
+			<RelativeLayout
+					android:layout_toLeftOf="@id/rating_layout"
+					android:paddingStart="@dimen/space_large"
+					android:paddingEnd="@dimen/space_large"
+					android:id="@+id/detail_layout"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent">
+
+				<TextView
+						android:textStyle="bold"
+						android:layout_marginTop="24dp"
+						android:id="@+id/tvTitle"
+						android:maxLines="1"
+						android:ellipsize="end"
+						android:paddingBottom="@dimen/space_small"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="@color/primaryText"
+						android:textSize="@dimen/movie_list_title_text_size"/>
+
+				<TextView
+						android:id="@+id/tvGenre"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_below="@id/tvTitle"
+						android:maxLines="1"
+						android:paddingBottom="@dimen/space_small"
+						android:ellipsize="end"
+						android:textColor="@color/secondaryText"
+						android:textSize="@dimen/movie_list_common_text_size"/>
+
+				<TextView
+						android:alpha="0.7"
+						android:paddingLeft="@dimen/space_small"
+						android:paddingRight="@dimen/space_small"
+						android:paddingTop="2dp"
+						android:layout_marginBottom="@dimen/space_medium"
+						android:layout_marginTop="@dimen/space_small"
+						android:paddingBottom="2dp"
+						android:id="@+id/tvReleaseDate"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_below="@id/tvGenre"
+						android:background="@drawable/release_date_background"
+						android:textColor="@android:color/white"
+						android:textSize="@dimen/movie_list_common_text_size"/>
+
+				<TextView
+						android:id="@+id/tvOverview"
+						android:maxLines="3"
+						android:ellipsize="end"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_below="@id/tvReleaseDate"
+						android:textColor="@color/secondaryText"
+						android:textSize="@dimen/movie_list_small_text_size"/>
+
+
+
+			</RelativeLayout>
+
+			<TextView
+					android:id="@+id/tvHot"
+					android:text="@string/very_popular"
+					android:textSize="22sp"
+					android:textColor="@color/colorAccent"
+					android:padding="@dimen/space_medium"
+					android:layout_alignParentBottom="true"
+					android:layout_alignParentEnd="true"
+					android:layout_alignParentRight="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"/>
+		</RelativeLayout>
+
+
+
+</FrameLayout>

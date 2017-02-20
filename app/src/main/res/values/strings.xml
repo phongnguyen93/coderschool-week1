@@ -1,0 +1,11 @@
+<resources>
+	<string name="app_name">WazzUp</string>
+	<string name="api_key">4df3cc7ebfe5b6f7e85667859bfd78be</string>
+	<string name="base_url">https://api.themoviedb.org/3/</string>
+	<string name="base_rating_text">/10</string>
+	<string name="movie_backdrop_title">Movie images</string>
+	<string name="movie_poster_title">Movie posters</string>
+	<string name="youtube_api_key">AIzaSyArL-Wr6Tmw_OiaXHlbdEPgKe5yi8HdKVg</string>
+	<string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+	<string name="very_popular">Very Popular</string>
+</resources>
